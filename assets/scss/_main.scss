@@ -1,4 +1,6 @@
-
+html {
+    font-family: 'Roboto';
+}
 a {
     color: $primary_color;
     &:hover {color: $secondary_color;}
@@ -6,6 +8,8 @@ a {
 }
 ul{
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 figure{
     margin: 0;
@@ -16,12 +20,25 @@ header{
         filter: grayscale(100);
     }
 }
+.desktop {
+    display: none;
+}
+.mobile-menu {
+    display: none;
+    &:hover{
+        display: block;
+    }
+}
+.mobile {
+    &:active + .mobile-menu{
+        display: block;
+    }
+}
 nav {
     display: flex;
     justify-content: center;
     margin: 0;
     ul {
-        margin: 0;
         display: flex;
         justify-content: space-around;
         gap: .1em; 
@@ -30,6 +47,10 @@ nav {
             background-color: $primary_color;
             padding: 15px 10px;
             font-family: 'Roboto';
+            a {
+                color: $white;
+                text-decoration: none;
+            }
             &:hover {
                 background-color: $white;
                 color: $primary_color;
@@ -37,19 +58,14 @@ nav {
                     color:$primary_color;
                 }
             }
-            a {
-                color: $white;
-                text-decoration: none;
-            }
         }
     }
 }
 
 
 h1 {
-}
-h1 {
-    font-size: 5vh;
+    font-size: 4vh;
+    font-weight: 100;
     font-family: 'Playfair regular';
     color: $primary_color;
 }
@@ -61,4 +77,82 @@ h2{
 .container{
     display: flex;
     justify-content: space-around;
+    column-gap: 1em;
+    margin-left: 10px;
+    padding: 2em 0;
+    .apropos__foto {
+        img{
+            max-width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 1px solid $secondary_color;
+        }
+    }
+    .description {
+        line-height: 2em;
+        li{
+            &:nth-child(1){
+                font-size: 1.5em;
+            }
+            &:nth-child(2){
+                position: relative;
+                &::before{
+                    font-size: 1.2em;
+                    position: absolute;
+                    top: 0px;
+                    left: -20px;
+                    font-family: 'Material Icons';
+                    content: "\e0be";
+                }
+            }
+            &:nth-child(3){
+                position: relative;
+                &::before{
+                    font-size: 1.2em;
+                    position: absolute;
+                    top: 0px;
+                    left: -20px;
+                    font-family: 'Material Icons';
+                    content: "\e0dd";
+                }
+            }
+        }
+    }
+}
+/******************************/
+/** Section Compétences **/
+.skills {
+    caption{
+        font-size: 1.2em;
+        padding-bottom: 1em;
+    }
+    width: 90%;
+    thead{
+        tr th:nth-child(1){
+            text-align: left;
+        }
+        tr th:nth-child(2){
+            text-align: right;
+        }
+    } 
+    tr td:nth-of-type(even){
+        text-align: right;
+    }
+}
+
+section:nth-of-type(even){
+    background-color: rgba($color: #373737, $alpha: 1.0);
+    color: $white;
+    padding: 1em;
+    h2 {
+        color: $primary_color;
+    } 
+}
+section:nth-of-type(odd){
+    h2{
+        padding-left: 0.5em;
+    }
+}
+article{
+    padding: 0 1em;
 }
