@@ -1,22 +1,72 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/roboto/Roboto-Regular-webfont.woff") format("woff");
+  font-display: swap; }
+@font-face {
+  font-family: 'Playfair regular';
+  src: url("../fonts/playfair/PlayfairDisplay-Regular.ttf") format("ttf");
+  font-display: swap; }
+@font-face {
+  font-family: 'Playfair Bold Italic';
+  src: url("../fonts/playfair/PlayfairDisplay-BoldItalic.ttf") format("ttf");
+  font-display: swap; }
+@font-face {
+  font-family: 'Playfair Bold';
+  src: url("../fonts/playfair/PlayfairDisplay-Bold.ttf") format("ttf");
+  font-display: swap; }
 a {
-  color: goldenrod; }
+  color: #daa520; }
   a:hover {
-    color: red; }
+    color: #373737; }
   a:active {
-    color: purple; }
+    color: #373737; }
+
+ul {
+  list-style: none; }
 
 figure {
   margin: 0; }
 
+header {
+  text-align: center; }
+  header img {
+    filter: grayscale(100); }
+
 nav {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin: 0; }
   nav ul {
-    list-style: none;
+    margin: 0;
     display: flex;
     justify-content: space-around;
-    gap: 1em; }
+    gap: .1em; }
     nav ul li {
-      padding: 10px; }
+      flex: 1 0 auto;
+      background-color: #daa520;
+      padding: 15px 10px;
+      font-family: 'Roboto'; }
+      nav ul li:hover {
+        background-color: white;
+        color: #daa520; }
+        nav ul li:hover a {
+          color: #daa520; }
+      nav ul li a {
+        color: white;
+        text-decoration: none; }
+
+h1 {
+  font-size: 5vh;
+  font-family: 'Playfair regular';
+  color: #daa520; }
+
+h2 {
+  font-family: Roboto;
+  color: #373737; }
+
+/** Section A propos **/
+.container {
+  display: flex;
+  justify-content: space-around; }
 
 /*# sourceMappingURL=style.css.map */

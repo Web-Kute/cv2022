@@ -1,23 +1,64 @@
 
 a {
-    color: goldenrod;
-    &:hover {color: red;}
-    &:active{color:purple}
+    color: $primary_color;
+    &:hover {color: $secondary_color;}
+    &:active{color:$secondary_color}
+}
+ul{
+    list-style: none;
 }
 figure{
     margin: 0;
 }
-
+header{
+    text-align: center;
+    img{
+        filter: grayscale(100);
+    }
+}
 nav {
     display: flex;
     justify-content: center;
+    margin: 0;
     ul {
-        list-style: none;
+        margin: 0;
         display: flex;
         justify-content: space-around;
-        gap: 1em; 
+        gap: .1em; 
         li{
-            padding: 10px;
+            flex: 1 0 auto;
+            background-color: $primary_color;
+            padding: 15px 10px;
+            font-family: 'Roboto';
+            &:hover {
+                background-color: $white;
+                color: $primary_color;
+                a {
+                    color:$primary_color;
+                }
+            }
+            a {
+                color: $white;
+                text-decoration: none;
+            }
         }
     }
+}
+
+
+h1 {
+}
+h1 {
+    font-size: 5vh;
+    font-family: 'Playfair regular';
+    color: $primary_color;
+}
+h2{
+    font-family: Roboto;
+    color: $secondary_color;
+}
+/** Section A propos **/
+.container{
+    display: flex;
+    justify-content: space-around;
 }
