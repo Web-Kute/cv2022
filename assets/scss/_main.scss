@@ -15,6 +15,7 @@ figure{
     margin: 0;
 }
 header{
+    font-size: 48px;
     text-align: center;
     img{
         filter: grayscale(100);
@@ -63,8 +64,8 @@ nav {
 }
 
 
-h1 {
-    font-size: 4vh;
+h1 { 
+    font-size: 5vh;
     font-weight: 100;
     font-family: 'Playfair regular';
     color: $primary_color;
@@ -90,30 +91,30 @@ h2{
     }
     .description {
         line-height: 2em;
-        li{
+        li {
             &:nth-child(1){
                 font-size: 1.5em;
             }
             &:nth-child(2){
                 position: relative;
                 &::before{
-                    font-size: 1.2em;
+                    font-family: 'Material Icons';
+                    font-size: 1.2em;                    
+                    content: "\e0be";
                     position: absolute;
                     top: 0px;
                     left: -20px;
-                    font-family: 'Material Icons';
-                    content: "\e0be";
                 }
             }
             &:nth-child(3){
                 position: relative;
                 &::before{
+                    font-family: 'Material Icons';
                     font-size: 1.2em;
+                    content: "\e0dd";
                     position: absolute;
                     top: 0px;
                     left: -20px;
-                    font-family: 'Material Icons';
-                    content: "\e0dd";
                 }
             }
         }
