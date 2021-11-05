@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="assets/img/dev-worker_x2100.jpg" alt="Photo deco"
+                srcset="assets/img/dev-worker_x2100.jpg 2100w, assets/img/dev-worker_x1550.jpg 1550w, assets/img/dev-worker_x775.jpg 775w, assets/img/dev-worker_x390.jpg 390w"
+                sizes="(min-width:400) 775px, (min-width:960) 1550px, (min-width:1600) 2100px, 100vw">
+        </figure>
+        <nav class="desktop hide">
+            <ul>
+                <li><a href="#">A propos</a></li>
+                <li><a href="#">Compétences</a></li>
+                <li><a href="#">Expérience</a></li>
+                <li><a href="#">Formation</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <nav class="mobile">
+            <span class="material-icons-outlined">menu</span>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="#apropos">A propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#exp">Expérience professionnelle</a></li>
+                <li><a href="#learn">Formation</a></li>
+                <li><a href="contact.html">Contacter moi</a></li>
+            </ul>
+        </div>
+        <h1>Développeur front-end</h1>
+    </header>
+    <section>
+        <h2>Contacter-moi</h2>
+        <form action="response.html" method="post">
+            <fieldset>
+                <div class="form__contact-group"><label for="name">Nom &
+                    Prénom : </label><input type="text" id="name" placeholder="Nom et prénom" required></div>
+                <div class="form__contact-group"><label for="email">Votre email : </label><input type="email" id="email" placeholder="Email" required></div>
+                <div class="form__contact-group"><label for="phone">Téléphone : </label><input type="tel" id="phone" placeholder="06  12 34 56"></div>
+                <div class="form__contact-group"><label for="message">Laissez-moi un commentaire</label><textarea name="" id="message" cols="30" rows="10"></textarea required></div>
+                <div class="form__contact-button">
+                    <input role="button" type="submit" value="Envoyer">
+                    <input role="button" type="reset" value="Annuler">
+                </div>
+            </fieldset>
+        </form>
+    </section>
+    <footer>
+        <div class="footer__social">
+            <div class="footer__social-item"><i class="fab fa-facebook"></i></div>
+            <div class="footer__social-item"><i class="fab fa-linkedin"></i></div>
+            <div class="footer__social-item"><i class="fab fa-twitter"></i></div>
+        </div>
+        <div class="copy">copyright &#169;</div>
+        <div class="links"></div>
+    </footer>
+</body>
+</html>

@@ -15,7 +15,6 @@ figure{
     margin: 0;
 }
 header{
-    font-size: 48px;
     text-align: center;
     img{
         filter: grayscale(100);
@@ -156,4 +155,28 @@ section:nth-of-type(odd){
 }
 article{
     padding: 0 1em;
+}
+/* Footer */
+
+footer{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .footer__social{
+        display: flex;
+        /*justify-content: space-around;*/
+        gap: 3em;
+        .footer__social-item{
+            font-size: 48px;
+            color:rgba($color: #3b5998, $alpha: .5);
+            cursor: pointer;
+            transition-duration: 500ms;
+            &:hover{
+                color: #3b5998;
+            }
+        }
+    }
+
 }

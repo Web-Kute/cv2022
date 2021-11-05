@@ -34,7 +34,6 @@ figure {
   margin: 0; }
 
 header {
-  font-size: 48px;
   text-align: center; }
   header img {
     filter: grayscale(100); }
@@ -144,17 +143,45 @@ section:nth-of-type(odd) h2 {
 article {
   padding: 0 1em; }
 
-@media screen and (min-width: 480px) and (max-width: 779px) {
-  h1 {
-    font-size: 10vh; }
+/* Footer */
+footer {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+  footer .footer__social {
+    display: flex;
+    /*justify-content: space-around;*/
+    gap: 3em; }
+    footer .footer__social .footer__social-item {
+      font-size: 48px;
+      color: rgba(59, 89, 152, 0.5);
+      cursor: pointer;
+      transition-duration: 500ms; }
+      footer .footer__social .footer__social-item:hover {
+        color: #3b5998; }
 
+@media screen and (min-width: 480px) and (max-width: 779px) {
   .desktop {
     display: block; }
 
   .mobile {
-    display: none; } }
+    display: none; }
+
+  .formation__container {
+    display: flex;
+    flex-wrap: wrap; }
+    .formation__container article {
+      flex-basis: 45%; } }
 @media screen and (min-width: 780px) {
-  h1 {
-    color: #373737; } }
+  .desktop {
+    display: block; }
+
+  .mobile {
+    display: none; }
+
+  .formation__container {
+    display: flex; } }
 
 /*# sourceMappingURL=style.css.map */
