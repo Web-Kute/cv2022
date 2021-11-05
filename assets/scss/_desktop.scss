@@ -1,4 +1,8 @@
 @media screen and(min-width:780px) {
+    h1{
+        margin: 0;
+        font-size: 4vw;
+    }
     .desktop {
         display: block;
     }
@@ -7,5 +11,8 @@
     }
     .formation__container{
         display: flex;
+    }
+    .container {
+        justify-content: center;
     }
 }

@@ -6,6 +6,9 @@ a {
     &:hover {color: $secondary_color;}
     &:active{color:$secondary_color}
 }
+img{
+    width: 100%;
+}
 ul{
     list-style: none;
     margin: 0;
@@ -30,8 +33,16 @@ header{
     }
 }
 .mobile {
+    position: relative;
     &:active + .mobile-menu{
         display: block;
+    }
+    &::before{
+        position: absolute;
+        font-family: 'Material Icons';
+        font-size: 2.5em;
+        content: "\e5d2";
+        cursor: pointer;
     }
 }
 nav {
@@ -41,18 +52,22 @@ nav {
     ul {
         display: flex;
         justify-content: space-around;
-        gap: .1em; 
         li{
-            flex: 1 0 auto;
+            flex: 0 0 14.9%;
             background-color: $primary_color;
-            padding: 15px 10px;
+            padding: 15px;
+            line-height: 2;
             font-family: 'Roboto';
+            cursor: pointer;
+            border: 1px solid $primary_color;
+            transition-duration: $duration;
             a {
+                display: block;
                 color: $white;
                 text-decoration: none;
             }
             &:hover {
-                background-color: $white;
+                background-color: $whitepale;
                 color: $primary_color;
                 a {
                     color:$primary_color;
@@ -64,10 +79,11 @@ nav {
 
 
 h1 { 
-    font-size: 5vh;
+    font-size: 8vw;
     font-weight: 100;
     font-family: 'Playfair regular';
     color: $primary_color;
+    margin-top: 1.5em;
 }
 h2{
     font-family: Roboto;
@@ -77,18 +93,18 @@ h2{
 .container{
     display: flex;
     justify-content: space-around;
-    column-gap: 1em;
-    margin-left: 10px;
-    padding: 2em 0;
+    margin-bottom: 2em;
     .apropos__foto {
+        flex: 0 0 160px;
         img{
-            max-width: 180px;
-            height: 180px;
+            max-width: 130px;
+            height: 130px;
             border-radius: 50%;
             border: 1px solid $secondary_color;
         }
     }
     .description {
+        flex: 0 0 160px;
         line-height: 2em;
         li {
             &:nth-child(1){
@@ -96,6 +112,7 @@ h2{
             }
             &:nth-child(2){
                 position: relative;
+                margin-left: 1.4em;
                 &::before{
                     font-family: 'Material Icons';
                     font-size: 1.2em;                    
@@ -107,6 +124,7 @@ h2{
             }
             &:nth-child(3){
                 position: relative;
+                margin-left: 1.4em;
                 &::before{
                     font-family: 'Material Icons';
                     font-size: 1.2em;
@@ -115,6 +133,9 @@ h2{
                     top: 0px;
                     left: -20px;
                 }
+            }
+            &:nth-child(4){
+                line-height: 1.2em;
             }
         }
     }
@@ -170,9 +191,9 @@ footer{
         gap: 3em;
         .footer__social-item{
             font-size: 48px;
-            color:rgba($color: #3b5998, $alpha: .5);
+            color:rgba($color: #3b5998, $alpha: 0.5);
             cursor: pointer;
-            transition-duration: 500ms;
+            transition-duration: $duration;
             &:hover{
                 color: #3b5998;
             }
