@@ -347,4 +347,18 @@
   [hidden] {
     display: none;
   }
-  
+
+  /**
+  * Add correct box-sizing to ul and li
+  */
+  ul, li {
+    box-sizing: border-box;
+  }
+
+  /**
+  *  
+  */
+  blockquote {
+    margin-left: 20px;
+    margin-right: 20px;
+  }

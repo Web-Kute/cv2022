@@ -3,6 +3,7 @@ html {
 }
 a {
     color: $primary_color;
+    transition-duration: $duration;
     &:hover {color: $secondary_color;}
     &:active{color:$secondary_color}
 }
@@ -19,9 +20,11 @@ figure{
 }
 header{
     text-align: center;
+
     img{
         filter: grayscale(100);
     }
+
 }
 .desktop {
     display: none;
@@ -43,6 +46,8 @@ header{
         font-size: 2.5em;
         content: "\e5d2";
         cursor: pointer;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 nav {
@@ -53,18 +58,20 @@ nav {
         display: flex;
         justify-content: space-around;
         li{
-            flex: 0 0 14.9%;
+            flex: 1 0 14.9%;
             background-color: $primary_color;
-            padding: 15px;
+            padding: 15px 0;
             line-height: 2;
             font-family: 'Roboto';
             cursor: pointer;
             border: 1px solid $primary_color;
             transition-duration: $duration;
+            text-align: center;
             a {
                 display: block;
                 color: $white;
                 text-decoration: none;
+                font-size: 1.5em;
             }
             &:hover {
                 background-color: $whitepale;
@@ -83,14 +90,15 @@ h1 {
     font-weight: 100;
     font-family: 'Playfair regular';
     color: $primary_color;
-    margin-top: 1.5em;
+    margin-top: 1.6em;
+    text-align: center;
 }
 h2{
     font-family: Roboto;
     color: $secondary_color;
 }
 /** Section A propos **/
-.container{
+.about__container{
     display: flex;
     justify-content: space-around;
     margin-bottom: 2em;
@@ -142,7 +150,7 @@ h2{
 }
 /******************************/
 /** Section Compétences **/
-.skills {
+.skills-data {
     caption{
         font-size: 1.2em;
         padding-bottom: 1em;
@@ -162,7 +170,7 @@ h2{
 }
 
 section:nth-of-type(even){
-    background-color: rgba($color: #373737, $alpha: 1.0);
+    background-color: rgba($color: $secondary_color, $alpha: 1.0);
     color: $white;
     padding: 1em;
     h2 {
@@ -177,6 +185,7 @@ section:nth-of-type(odd){
 article{
     padding: 0 1em;
 }
+
 /* Footer */
 
 footer{
@@ -199,5 +208,61 @@ footer{
             }
         }
     }
-
+}
+/** Page contact **/
+.contact {
+    padding: 15px;
+}
+form {
+    legend {
+        margin-bottom: 15px;
+    }
+    .form__contact{
+        &-group {
+        display: flex;
+        align-items: baseline;
+        &:nth-child(5){
+            flex-direction: column;
+            align-items: stretch;
+        }
+        label {
+            font-size: 0.8em;
+        }
+        input {
+            flex: 1;
+            margin-bottom: 1em;
+            background-color: rgba($color: $primary_color, $alpha: 0.2);
+            border:none;
+            padding: 7px;
+            &:focus {
+                outline: none;
+                border: thin dashed $secondary_color;
+                background-color: rgba($color: $primary_color, $alpha: 0.5);
+            }
+            &[placeholder]{
+                font-size: 0.8em;
+            }
+        }
+    }
+    &-button{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 1em;
+    }
+}
+}
+.btn{
+   @include btn-form($secondary_color, $primary_color, $primary_color, $duration);
+}
+.btn-reset {
+    opacity: 0.7;
+}
+@media screen and (max-width:480px) and (orientation:portrait) {
+    footer.response{
+        position: absolute;
+        bottom: 0;;
+        left:50%;
+        transform:translateX(-50%);
+    }
 }

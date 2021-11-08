@@ -1,9 +1,12 @@
 @media screen and (min-width:480px) and(max-width:779px) {
     .desktop {
-        display: block;
+        display: none;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 100px;
     }
     .mobile {
-        display: none;
+        display: block;
     }
     .formation__container{
         display: flex;

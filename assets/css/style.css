@@ -29,6 +29,8 @@ html {
 
 a {
   color: #daa520;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
 }
 
 a:hover {
@@ -88,6 +90,9 @@ header img {
   font-size: 2.5em;
   content: "\e5d2";
   cursor: pointer;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 nav {
@@ -109,23 +114,25 @@ nav ul {
 }
 
 nav ul li {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 14.9%;
-          flex: 0 0 14.9%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 14.9%;
+          flex: 1 0 14.9%;
   background-color: #daa520;
-  padding: 15px;
+  padding: 15px 0;
   line-height: 2;
   font-family: 'Roboto';
   cursor: pointer;
   border: 1px solid #daa520;
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
+  text-align: center;
 }
 
 nav ul li a {
   display: block;
   color: white;
   text-decoration: none;
+  font-size: 1.5em;
 }
 
 nav ul li:hover {
@@ -142,7 +149,8 @@ h1 {
   font-weight: 100;
   font-family: 'Playfair regular';
   color: #daa520;
-  margin-top: 1.5em;
+  margin-top: 1.6em;
+  text-align: center;
 }
 
 h2 {
@@ -151,7 +159,7 @@ h2 {
 }
 
 /** Section A propos **/
-.container {
+.about__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,36 +168,36 @@ h2 {
   margin-bottom: 2em;
 }
 
-.container .apropos__foto {
+.about__container .apropos__foto {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 160px;
           flex: 0 0 160px;
 }
 
-.container .apropos__foto img {
+.about__container .apropos__foto img {
   max-width: 130px;
   height: 130px;
   border-radius: 50%;
   border: 1px solid #373737;
 }
 
-.container .description {
+.about__container .description {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 160px;
           flex: 0 0 160px;
   line-height: 2em;
 }
 
-.container .description li:nth-child(1) {
+.about__container .description li:nth-child(1) {
   font-size: 1.5em;
 }
 
-.container .description li:nth-child(2) {
+.about__container .description li:nth-child(2) {
   position: relative;
   margin-left: 1.4em;
 }
 
-.container .description li:nth-child(2)::before {
+.about__container .description li:nth-child(2)::before {
   font-family: 'Material Icons';
   font-size: 1.2em;
   content: "\e0be";
@@ -198,12 +206,12 @@ h2 {
   left: -20px;
 }
 
-.container .description li:nth-child(3) {
+.about__container .description li:nth-child(3) {
   position: relative;
   margin-left: 1.4em;
 }
 
-.container .description li:nth-child(3)::before {
+.about__container .description li:nth-child(3)::before {
   font-family: 'Material Icons';
   font-size: 1.2em;
   content: "\e0dd";
@@ -212,30 +220,30 @@ h2 {
   left: -20px;
 }
 
-.container .description li:nth-child(4) {
+.about__container .description li:nth-child(4) {
   line-height: 1.2em;
 }
 
 /******************************/
 /** Section Compétences **/
-.skills {
+.skills-data {
   width: 90%;
 }
 
-.skills caption {
+.skills-data caption {
   font-size: 1.2em;
   padding-bottom: 1em;
 }
 
-.skills thead tr th:nth-child(1) {
+.skills-data thead tr th:nth-child(1) {
   text-align: left;
 }
 
-.skills thead tr th:nth-child(2) {
+.skills-data thead tr th:nth-child(2) {
   text-align: right;
 }
 
-.skills tr td:nth-of-type(even) {
+.skills-data tr td:nth-of-type(even) {
   text-align: right;
 }
 
@@ -294,12 +302,116 @@ footer .footer__social .footer__social-item:hover {
   color: #3b5998;
 }
 
+/** Page contact **/
+.contact {
+  padding: 15px;
+}
+
+form legend {
+  margin-bottom: 15px;
+}
+
+form .form__contact-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+form .form__contact-group:nth-child(5) {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+form .form__contact-group label {
+  font-size: 0.8em;
+}
+
+form .form__contact-group input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-bottom: 1em;
+  background-color: rgba(218, 165, 32, 0.2);
+  border: none;
+  padding: 7px;
+}
+
+form .form__contact-group input:focus {
+  outline: none;
+  border: thin dashed #373737;
+  background-color: rgba(218, 165, 32, 0.5);
+}
+
+form .form__contact-group input[placeholder] {
+  font-size: 0.8em;
+}
+
+form .form__contact-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 1em;
+}
+
+.btn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+  color: #373737;
+  background-color: #daa520;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  font-family: Roboto;
+  font-size: 1.2em;
+  font-weight: 100;
+}
+
+.btn:hover {
+  opacity: 1;
+  color: #daa520;
+  background-color: white;
+  border: 1px solid #daa520;
+}
+
+.btn-reset {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  footer.response {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
 @media screen and (min-width: 480px) and (max-width: 779px) {
   .desktop {
-    display: block;
+    display: none;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 100px;
   }
   .mobile {
-    display: none;
+    display: block;
   }
   .formation__container {
     display: -webkit-box;
@@ -319,8 +431,15 @@ footer .footer__social .footer__social-item:hover {
     margin: 0;
     font-size: 4vw;
   }
+  header {
+    position: relative;
+  }
   .desktop {
     display: block;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 2;
   }
   .mobile {
     display: none;
@@ -334,6 +453,30 @@ footer .footer__social .footer__social-item:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  form .form__contact-button {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 1em;
+            column-gap: 1em;
+  }
+  .btn {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+  }
+  .skills-data {
+    width: 40%;
+    margin: 0 auto;
+  }
+  .about__container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .anchor {
+    position: relative;
+    top: -92px;
   }
 }
 /*# sourceMappingURL=style.css.map */

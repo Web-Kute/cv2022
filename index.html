@@ -19,35 +19,38 @@
     <header>
         <figure>
             <img src="assets/img/dev-worker_x2100.jpg" alt="Photo deco"
-                srcset="assets/img/dev-worker_x2100.jpg 2100w, assets/img/dev-worker_x1550.jpg 1550w, assets/img/dev-worker_x775.jpg 775w, assets/img/dev-worker_x390.jpg 390w"
-                sizes="(min-width:400) 775px, (min-width:960) 1550px, (min-width:1600) 2100px, 100vw">
+                srcset="assets/img/dev-worker_x2100.jpg 2000w, assets/img/dev-worker_x1550.jpg 1600w, assets/img/dev-worker_x775.jpg 760w, assets/img/dev-worker_x390.jpg 390w"
+                sizes="(min-width:400px) 760w, (min-width: 960px) 1600w, (min-width:1600px) 2000w, 100vw">
         </figure>
-        <nav class="desktop hide">
-            <ul>
-                <li><a href="index.html"><span class="material-icons-outlined">home</span></a></li>
-                <li><a href="#">A propos</a></li>
-                <li><a href="#">Compétences</a></li>
-                <li><a href="#">Expérience</a></li>
-                <li><a href="#">Formation</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <nav class="mobile"></nav>
-        <div class="mobile-menu">
-            <ul>
-                <li><a href="#apropos">A propos</a></li>
-                <li><a href="#skills">Compétences</a></li>
-                <li><a href="#exp">Expérience professionnelle</a></li>
-                <li><a href="#learn">Formation</a></li>
-                <li><a href="contact.html">Contacter moi</a></li>
-            </ul>
-        </div>
-        <h1>Développeur front-end</h1>
+        <!-- sizes="(min-width:400px) 775px, (min-width:960px) 1550px, (min-width:1600px) 2100px, 100vw" -->
     </header>
+    <nav class="desktop hide">
+        <ul>
+            <li><a href="index.html"><span class="material-icons-outlined">home</span></a></li>
+            <li><a href="#about">A propos</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#experience">Expérience</a></li>
+            <li><a href="#formation">Formation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <nav class="mobile"></nav>
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#about">A propos</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#experience">Expérience</a></li>
+            <li><a href="#formation">Formation</a></li>
+            <li><a href="contact.html">Contacter moi</a></li>
+        </ul>
+    </div>
+    
     <main>
+        <h1>Développeur front-end</h1>
         <section>
+            <a class="anchor" id="about"></a>
             <h2>A propos</h2>
-            <div class="container">
+            <div class="about__container">
                 <div class="apropos__foto">
                     <figure>
                         <img src="assets/img/avatar.png" alt="Photo profil">
@@ -56,7 +59,7 @@
                 <div class="description">
                     <ul>
                         <li>John Doe</li>
-                        <li><a href="mailto:dego@gmail.com">Me contacter</a></li>
+                        <li><a href="mailto:j.doe@gmail.com">Me contacter</a></li>
                         <li><a href="tel:+12345678">12345678</a></li>
                         <li>
                             <address>23 rue greta 92100 <br>Boulogne-Billancourt</address>
@@ -66,8 +69,9 @@
             </div>
         </section>
         <section>
+            <a class="anchor" id="skills"></a>
             <h2>Compétences</h2>
-            <table class="skills">
+            <table class="skills-data">
                 <caption>Mes compétences front-end</caption>
                 <thead>
                     <tr>
@@ -103,6 +107,7 @@
 
         </section>
         <section>
+            <a class="anchor" id="experience"></a>
             <h2>Expérience professionnelle</h2>
             <article>
                 <h3>Canon</h3>
@@ -136,6 +141,7 @@
             </article>
         </section>
         <section>
+            <a class="anchor" id="formation"></a>
             <h2>Formation</h2>
             <div class="formation__container">
                 <article>
@@ -171,7 +177,7 @@
             <div class="footer__social-item"><i class="fab fa-linkedin"></i></div>
             <div class="footer__social-item"><i class="fab fa-twitter"></i></div>
         </div>
-        <div class="copy">copyright &#169;</div>
+        <div class="copy">copyright &#169; 2022</div>
         <div class="links"></div>
     </footer>
 

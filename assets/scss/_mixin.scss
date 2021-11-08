@@ -1,0 +1,18 @@
+@mixin btn-form($color, $bgcolor, $hovercolor, $duration) {
+    flex: 0 0 45%;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    color: $color;
+    background-color: $bgcolor;
+    transition-duration: $duration;
+    font-family: Roboto;
+    font-size: 1.2em;
+    font-weight:100;
+    &:hover {
+        opacity: 1;
+        color: $hovercolor;
+        background-color: white;
+        border: 1px solid $hovercolor;
+    }
+}
