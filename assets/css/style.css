@@ -50,6 +50,11 @@ header img {
           filter: grayscale(100);
 }
 
+h4, h5 {
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
 /* Hide desktop menu for mobile */
 .desktop {
   display: none;
