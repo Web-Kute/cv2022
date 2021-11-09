@@ -125,12 +125,12 @@ nav ul li a {
   font-size: 1.5em;
 }
 
-nav ul li:hover {
+nav ul li:hover, nav ul li.active {
   background-color: #f0f8ff;
   color: #daa520;
 }
 
-nav ul li:hover a {
+nav ul li:hover a, nav ul li.active a {
   color: #daa520;
 }
 
