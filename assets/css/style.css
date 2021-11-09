@@ -494,7 +494,7 @@ form .form__contact-button {
   .anchor {
     /* Positionne l'ancre à 92px de sa position initiale afin de voir le titre de la section lors du click sur l'item de menu concerné  */
     position: relative;
-    top: -92px;
+    top: -80px;
   }
 }
 /*# sourceMappingURL=style.css.map */
