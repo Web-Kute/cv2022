@@ -1,17 +1,22 @@
+//Breakpoint for tablet
 @media screen and (min-width:480px) and(max-width:779px) {
     .desktop {
+        /* Hide menu between these breakpoints */
         display: none;
-        position: sticky;
-        position: -webkit-sticky;
-        top: 100px;
     }
+
     .mobile {
+        /* show menu between these breakpoints */
         display: block;
     }
-    .formation__container{
+
+    .formation__container {
+        /* Align articles in row */
         display: flex;
         flex-wrap: wrap;
-        article{
+
+        article {
+            /* Ideal size of one article 45% / container */
             flex-basis: 45%;
         }
     }

@@ -8,7 +8,8 @@
     transition-duration: $duration;
     font-family: Roboto;
     font-size: 1.2em;
-    font-weight:100;
+    font-weight: 100;
+
     &:hover {
         opacity: 1;
         color: $hovercolor;

@@ -1,42 +1,61 @@
+//Breakpoint for desktop
 @media screen and(min-width:780px) {
-    h1{
+    h1 {
         margin: 0;
         font-size: 4vw;
+        /* use viewport unit vw for viewport width*/
+        /* Viewport == browser window size. If the viewport is 40cm wide, 1vw == 0.4cm. */
+        /*
+        1vw = 1% of viewport width
+        1vh = 1% of viewport height
+        1vmin = 1vw or 1vh, le plus petit des deux
+        1vmax = 1vw or 1vh, le plus grand des deux
+        */
     }
-    header{
-        position: relative;
-    }
+
     .desktop {
+        /* Display desktop menu for this breakpoint (780px) */
         display: block;
+        /* Stick menu at the top of window */
         position: sticky;
         position: -webkit-sticky;
         top: 0;
+        /* positionne la div(.desktop) au dessus des éléments dont le z-index(ordre) est inférieur à 2 */
         z-index: 2;
     }
+
     .mobile {
         display: none;
     }
-    .formation__container{
+
+    .formation__container {
         display: flex;
     }
+
     .container {
         justify-content: center;
     }
-    form .form__contact-button{
+
+    form .form__contact-button {
         justify-content: center;
         column-gap: 1em;
     }
+
     .btn {
         flex-basis: 20%;
     }
-    .skills-data{
+
+    .skills-data {
         width: 40%;
         margin: 0 auto;
     }
-    .about__container{
+
+    .about__container {
         justify-content: center;
     }
-    .anchor{
+
+    .anchor {
+        /* Positionne l'ancre à 92px de sa position initiale afin de voir le titre de la section lors du click sur l'item de menu concerné  */
         position: relative;
         top: -92px;
     }

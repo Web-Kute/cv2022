@@ -18,12 +18,12 @@
 <body>
     <header>
         <figure>
-            <img src="assets/img/dev-worker_x2100.jpg" alt="Photo deco"
+            <img src="assets/img/dev-worker_x2100.jpg" alt="Développeur front-end"
                 srcset="assets/img/dev-worker_x2100.jpg 1600w, assets/img/dev-worker_x1550.jpg 1200w, assets/img/dev-worker_x775.jpg 760w, assets/img/dev-worker_x390.jpg 390w"
                 sizes="(min-width:400px) 775px, (min-width:960px) 1550px, (min-width:1600px) 2100px, 100vw">
         </figure>
     </header>
-    <nav class="desktop hide">
+    <nav class="desktop">
         <ul>
             <li><a href="index.html"><span class="material-icons-outlined">home</span></a></li>
             <li><a href="index.html#about">A propos</a></li>
@@ -36,6 +36,7 @@
     <nav class="mobile"></nav>
     <div class="mobile-menu">
         <ul>
+            <!-- Look at links go to anchor of index.html -->
             <li><a href="index.html#about">A propos</a></li>
             <li><a href="index.html#skills">Compétences</a></li>
             <li><a href="index.html#experience">Expérience</a></li>
@@ -49,14 +50,22 @@
         <form action="response.html" method="get">
             <fieldset>
                 <legend>&nbsp;Me contacter&nbsp;</legend>
-                <div class="form__contact-group"><label for="name">Nom & Prénom : &nbsp;</label><input type="text" id="name"
-                        placeholder="Nom et prénom" min="3" max="30" required></div>
-                <div class="form__contact-group"><label for="email">Votre email : &nbsp;</label><input type="email" id="email"
-                        placeholder="Email" required></div>
-                <div class="form__contact-group"><label for="phone">Téléphone : &nbsp;</label><input type="tel" id="phone"
-                        placeholder="06 12 34 56 78"></div>
-                <div class="form__contact-group"><label for="message">Laissez-moi un message</label><textarea
-                        name="message" id="message" cols="30" rows="10" minlength="10" maxlength="240" placeholder="Commentaires" required></textarea></div>
+                <div class="form__contact-group">
+                    <label for="name">Nom & Prénom : &nbsp;</label>
+                    <input type="text" id="name" placeholder="Nom et prénom" required>
+                </div>
+                <div class="form__contact-group">
+                    <label for="email">Votre email : &nbsp;</label>
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="form__contact-group">
+                    <label for="phone">Téléphone : &nbsp;</label>
+                    <input type="tel" id="phone" placeholder="06 12 34 56 78">
+                </div>
+                <div class="form__contact-group">
+                    <label for="message">Laissez-moi un message</label>
+                    <textarea name="message" id="message" cols="30" rows="10" minlength="10" maxlength="240" placeholder="Commentaires" required></textarea>
+                </div>
                 <div class="form__contact-button">
                     <input class="btn btn-submit" type="submit" value="Envoyer">
                     <input class="btn btn-reset" type="reset" value="Annuler">
@@ -71,7 +80,6 @@
             <div class="footer__social-item"><i class="fab fa-twitter"></i></div>
         </div>
         <div class="copy">copyright &#169; 2022</div>
-        <div class="links"></div>
     </footer>
 </body>
 

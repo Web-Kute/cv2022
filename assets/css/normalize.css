@@ -143,10 +143,12 @@
   
   /**
    * Remove the border on images inside links in IE 10.
+   * Preserved image aspect ratio.
    */
   
   img {
     border-style: none;
+    width: 100%;
   }
   
   /* Forms
@@ -352,7 +354,10 @@
   * Add correct box-sizing to ul and li
   */
   ul, li {
+    list-style: none;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
   /**

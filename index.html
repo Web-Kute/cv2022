@@ -18,23 +18,24 @@
 <body>
     <header>
         <figure>
-            <img src="assets/img/dev-worker_x2100.jpg" alt="Photo deco"
-                srcset="assets/img/dev-worker_x2100.jpg 2000w, assets/img/dev-worker_x1550.jpg 1600w, assets/img/dev-worker_x775.jpg 760w, assets/img/dev-worker_x390.jpg 390w"
-                sizes="(min-width:400px) 760w, (min-width: 960px) 1600w, (min-width:1600px) 2000w, 100vw">
+            <img src="assets/img/dev-worker_x2100.jpg" alt="Développeur front-end"
+                srcset="assets/img/dev-worker_x2100.jpg 1600w, assets/img/dev-worker_x1550.jpg 1200w, assets/img/dev-worker_x775.jpg 760w, assets/img/dev-worker_x390.jpg 390w"
+                sizes="(min-width:400px) 775px, (min-width:960px) 1550px, (min-width:1600px) 2100px, 100vw">
         </figure>
-        <!-- sizes="(min-width:400px) 775px, (min-width:960px) 1550px, (min-width:1600px) 2100px, 100vw" -->
     </header>
-    <nav class="desktop hide">
+    <nav class="desktop">
         <ul>
-            <li><a href="index.html"><span class="material-icons-outlined">home</span></a></li>
-            <li><a href="#about">A propos</a></li>
-            <li><a href="#skills">Compétences</a></li>
-            <li><a href="#experience">Expérience</a></li>
-            <li><a href="#formation">Formation</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" title="Accueil"><span class="material-icons-outlined">home</span></a></li>
+            <li><a href="#about" title="Mes infos">A propos</a></li>
+            <li><a href="#skills" title="Compétences">Compétences</a></li>
+            <li><a href="#experience" title="Expériences professionnelles">Expérience</a></li>
+            <li><a href="#formation" title="Formation">Formation</a></li>
+            <li><a href="contact.html" title="Contacter-moi">Contact</a></li>
         </ul>
     </nav>
+    <!-- Burger Menu -->
     <nav class="mobile"></nav>
+    <!-- Sub-menu of burger menu -->
     <div class="mobile-menu">
         <ul>
             <li><a href="#about">A propos</a></li>
@@ -44,7 +45,7 @@
             <li><a href="contact.html">Contacter moi</a></li>
         </ul>
     </div>
-    
+
     <main>
         <h1>Développeur front-end</h1>
         <section>
@@ -59,8 +60,8 @@
                 <div class="description">
                     <ul>
                         <li>John Doe</li>
-                        <li><a href="mailto:j.doe@gmail.com">Me contacter</a></li>
-                        <li><a href="tel:+12345678">12345678</a></li>
+                        <li><a href="mailto:j.doe@gmail.com" title="Email">Me contacter</a></li>
+                        <li><a href="tel:+12345678" title="Téléphone">+12 34 56 78</a></li>
                         <li>
                             <address>23 rue greta 92100 <br>Boulogne-Billancourt</address>
                         </li>
@@ -81,20 +82,20 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>HTML</td>
-                        <td><progress class="file1" max="100" value="70"> 70% </progress></td>
+                        <td><label for="file1">HTML</label></td>
+                        <td><progress id="file1" max="100" value="70"> 70% </progress></td>
                     </tr>
                     <tr>
-                        <td>CSS</td>
-                        <td><progress class="file2" max="100" value="30"> 30% </progress></td>
+                        <td><label for="file2">CSS</label></td>
+                        <td><progress id="file2" max="100" value="50"> 50% </progress></td>
                     </tr>
                     <tr>
-                        <td>Git</td>
-                        <td><progress class="file3" max="100" value="40"> 40% </progress></td>
+                        <td><label for="file3">Git</label></td>
+                        <td><progress id="file3" max="100" value="40"> 40% </progress></td>
                     </tr>
                     <tr>
-                        <td>JavaScript</td>
-                        <td><progress class="file4" max="100" value="10"> 10% </progress></td>
+                        <td><label for="file4">JavaScript</label></td>
+                        <td><progress id="file4" max="100" value="10"> 10% </progress></td>
                     </tr>
                 </tbody>
                 <tfoot>
@@ -112,32 +113,21 @@
             <article>
                 <h3>Canon</h3>
                 <h4>2018 - en poste</h4>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis blanditiis harum quia
-                    tenetur, fugit reiciendis quisquam aut sed dolore dolorum ratione debitis corporis
-                    recusandae incidunt est maiores ducimus consequuntur doloribus?
-                    Tenetur at molestias autem veritatis, sapiente repellat harum aspernatur minus
-                    repellendus fugit iste, tempore minima eaque ea a. Quam, suscipit amet pariatur
-                    necessitatibus quia illo maxime deserunt vel quasi eveniet?</p>
+                <p>Oui alors écoute moi, premièrement, en vérité, la vérité, il n'y a pas de vérité et cette officialité peut vraiment retarder ce qui devrait devenir... Et là, vraiment, j'essaie de tout coeur de donner la plus belle réponse de la terre !</p>
+                    <p>Je me souviens en fait, tu vois au passage qu'il n'y a rien de concret car on vit dans une réalité qu'on a créée et que j'appelle illusion et je ne cherche pas ici à mettre un point ! C'est pour ça que j'ai fait des films avec des replicants.</p>                    
+                    <p>Tu comprends, après il faut s'intégrer tout ça dans les environnements et il y a de bonnes règles, de bonnes rules et cela même si les gens ne le savent pas ! Pour te dire comme on a beaucoup à apprendre sur la vie ! </p>
             </article>
             <article>
                 <h3>Christian Louboutin</h3>
                 <h4>2016 - 2018</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde sequi, rem aliquam minus
-                    aliquid tempore, quos soluta quasi quibusdam voluptatibus adipisci nostrum dicta atque
-                    ratione quam. Eum eius perferendis esse!
-                    Aliquam, est repudiandae quis sint corrupti praesentium ullam fugit magnam saepe. Harum
-                    sapiente, optio numquam unde accusantium voluptatem quod magni architecto reprehenderit
-                    quidem exercitationem libero? Asperiores ad labore iste ea!</p>
+                <p>Même si on se ment, après il faut s'intégrer tout ça dans les environnements et entre penser et dire, il y a un monde de différence et cela même si les gens ne le savent pas ! Et là, vraiment, j'essaie de tout coeur de donner la plus belle réponse de la terre !</p>
+                <p>Quand tu fais le calcul, je suis mon meilleur modèle car il faut toute la splendeur du aware car l'aboutissement de l'instinct, c'est l'amour ! Donc on n'est jamais seul spirituellement ! </p>
             </article>
             <article>
                 <h3>Koala</h3>
                 <h4>2000 - 2016</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo itaque, natus
-                    necessitatibus doloremque ratione veritatis quidem quasi est numquam, quo aspernatur
-                    perspiciatis cum modi voluptas eius! Hic explicabo qui dicta?
-                    Ipsa alias voluptate, tenetur quae corporis pariatur nulla enim nam dolorem praesentium
-                    labore exercitationem in quos aperiam. Sapiente, consectetur tempora quis pariatur, ad
-                    minima vero unde nihil sit fuga eius.</p>
+                <p>Je ne voudrais pas rentrer dans des choses trop dimensionnelles, mais, je sais que, grâce à ma propre vérité en vérité, la vérité, il n'y a pas de vérité parce que spirituellement, on est tous ensemble, ok ? Pour te dire comme on a beaucoup à apprendre sur la vie !</p>
+                <p>Ça sounds good, si vraiment tu veux te rappeler des souvenirs de ton perroquet, entre penser et dire, il y a un monde de différence et parfois c'est bon parfois c'est pas bon. Il y a un an, je t'aurais parlé de mes muscles. </p>
             </article>
         </section>
         <section>
@@ -148,37 +138,30 @@
                     <h3>WebForce3</h3>
                     <h4>5 mois</h4>
                     <h5>Nanterre</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quia odit nam, at unde
-                        nostrum. Eveniet modi recusandae, neque, veritatis maiores deleniti, dolore laboriosam
-                        obcaecati quasi suscipit laudantium id laborum.</p>
+                    <p>Je ne voudrais pas rentrer dans des choses trop dimensionnelles, mais, j'ai vraiment une grande mission car on vit dans une réalité qu'on a créée et que j'appelle illusion et cela même si les gens ne le savent pas ! Et j'ai toujours grandi parmi les chiens.</p>
                 </article>
                 <article>
                     <h3>3WA</h3>
                     <h4>6 mois</h4>
                     <h5>Paris 10</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, non? Soluta veniam
-                        cupiditate iste libero, odio aspernatur aperiam consequatur ea architecto quis quidem,
-                        enim dignissimos. Ullam perferendis culpa in beatae?</p>
+                    <p>Ah non attention, tu vois au passage qu'il n'y a rien de concret car on vit dans une réalité qu'on a créée et que j'appelle illusion et ça, c'est très dur, et, et, et... c'est très facile en même temps. Il y a un an, je t'aurais parlé de mes muscles. </p>
                 </article>
                 <article>
                     <h3>GRETA</h3>
                     <h4>3 mois</h4>
                     <h5>Boulogne-billancourt</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perspiciatis itaque
-                        maxime velit molestias rerum officiis sed voluptates dolores provident omnis corporis
-                        autem, repellendus modi non qui recusandae, quas perferendis?</p>
+                    <p>Ça sounds good, j'ai vraiment une grande mission car en vérité, la vérité, il n'y a pas de vérité et je ne cherche pas ici à mettre un point ! C'est pour ça que j'ai fait des films avec des replicants. </p>
                 </article>
             </div>
         </section>
     </main>
     <footer>
         <div class="footer__social">
-            <div class="footer__social-item"><i class="fab fa-facebook"></i></div>
-            <div class="footer__social-item"><i class="fab fa-linkedin"></i></div>
-            <div class="footer__social-item"><i class="fab fa-twitter"></i></div>
+            <div class="footer__social-item"><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></div>
+            <div class="footer__social-item"><a href="#" title="Facebook"><i class="fab fa-facebook"></i></a></div>
+            <div class="footer__social-item"><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></div>
         </div>
         <div class="copy">copyright &#169; 2022</div>
-        <div class="links"></div>
     </footer>
 
 </html>
