@@ -125,8 +125,7 @@ h2 {
         flex: 0 0 160px;
 
         img {
-            max-width: 130px;
-            height: 130px;
+            width: 130px;
             border-radius: 50%;
             border: 1px solid $secondary_color;
         }
@@ -307,6 +306,13 @@ form {
                     font-size: 0.8em;
                 }
             }
+            textarea {
+                padding: 7px;
+                &:focus {
+                    outline: none;
+                    border: 1px solid $primary_color;
+                }
+            }
         }
 
         &-button {
@@ -314,6 +320,9 @@ form {
             justify-content: space-between;
             flex-wrap: wrap;
             margin-top: 1em;
+        }
+        &-footer {
+            margin-left: 5px;
         }
     }
 }

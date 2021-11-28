@@ -169,8 +169,7 @@ h2 {
 }
 
 .about__container .apropos__foto img {
-  max-width: 130px;
-  height: 130px;
+  width: 130px;
   border-radius: 50%;
   border: 1px solid #373737;
 }
@@ -365,6 +364,15 @@ form .form__contact-group input[placeholder] {
   font-size: 0.8em;
 }
 
+form .form__contact-group textarea {
+  padding: 7px;
+}
+
+form .form__contact-group textarea:focus {
+  outline: none;
+  border: 1px solid #daa520;
+}
+
 form .form__contact-button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -375,6 +383,10 @@ form .form__contact-button {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 1em;
+}
+
+form .form__contact-footer {
+  margin-left: 5px;
 }
 
 .btn {
