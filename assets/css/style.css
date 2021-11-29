@@ -50,7 +50,8 @@ header img {
           filter: grayscale(100);
 }
 
-h4, h5 {
+h4,
+h5 {
   font-weight: 100;
   letter-spacing: 1px;
 }
@@ -239,6 +240,35 @@ h2 {
 
 .skills-data tr td:nth-of-type(even) {
   text-align: right;
+}
+
+.skills-data tr label {
+  position: relative;
+}
+
+.skills-data tr label::after {
+  content: "";
+  background: url("../img/icons-front.png") no-repeat;
+  height: 50px;
+  width: 50px;
+  display: block;
+  background-size: cover;
+}
+
+.skills-data tr:nth-child(1) label::after {
+  background-position: 2px center;
+}
+
+.skills-data tr:nth-child(2) label::after {
+  background-position: -45px center;
+}
+
+.skills-data tr:nth-child(3) label::after {
+  background-position: -92px center;
+}
+
+.skills-data tr:nth-child(4) label::after {
+  background-position: -148px center;
 }
 
 section:nth-of-type(even) {

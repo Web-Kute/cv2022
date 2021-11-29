@@ -24,10 +24,13 @@ header {
         filter: grayscale(100);
     }
 }
-h4, h5 {
+
+h4,
+h5 {
     font-weight: 100;
     letter-spacing: 1px;
 }
+
 /* Hide desktop menu for mobile */
 .desktop {
     display: none;
@@ -89,7 +92,8 @@ nav {
                 font-size: 1.5em;
             }
 
-            &:hover, &.active {
+            &:hover,
+            &.active {
                 background-color: $whitepale;
                 color: $primary_color;
 
@@ -199,6 +203,56 @@ h2 {
     tr td:nth-of-type(even) {
         text-align: right;
     }
+
+    tr {
+        label {
+            position: relative;
+
+            &::after {
+                // position: absolute;
+                // left: 60px;
+                // top: -25px;
+                content: "";
+                background: url("../img/icons-front.png") no-repeat;
+                height: 50px;
+                width: 50px;
+                display: block;
+                background-size: cover;
+            }
+        }
+
+        &:nth-child(1) {
+            label {
+                &::after {
+                    background-position: 2px center;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            label {
+                &::after {
+                    background-position: -45px center;
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            label {
+                &::after {
+                    background-position: -92px center;
+                }
+            }
+        }
+
+        &:nth-child(4) {
+            label {
+                &::after {
+                    background-position: -148px center;
+                }
+            }
+        }
+    }
 }
 
 section:nth-of-type(even) {
@@ -306,8 +360,10 @@ form {
                     font-size: 0.8em;
                 }
             }
+
             textarea {
                 padding: 7px;
+
                 &:focus {
                     outline: none;
                     border: 1px solid $primary_color;
@@ -321,6 +377,7 @@ form {
             flex-wrap: wrap;
             margin-top: 1em;
         }
+
         &-footer {
             margin-left: 5px;
         }
