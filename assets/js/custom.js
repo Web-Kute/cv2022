@@ -33,8 +33,20 @@ window.addEventListener('DOMContentLoaded', function () {
     let btnRadio = document.querySelectorAll('input[name="theme"]');
 
     // let section = sectionTheme.forEach((sec) => {
-
+    //une manière de parcourir la collection
     // })
+
+    // console.log(btnRadio);
+
+    // let btnRadioArray = Array.from(btnRadio)
+    // console.log(btnRadioArray);
+
+
+    // btnRadioArray.map((btn) => {
+    //une manière de parcourir la collection
+    //     return console.log(btn.classList.add('lower'));
+    // })
+
 
     // Themes Color
     function changeColorSection(color) {
@@ -43,6 +55,7 @@ window.addEventListener('DOMContentLoaded', function () {
             section.style.setProperty('--bg-section-color', color);
         }
         for (const btn of btnRadio) {
+            //une manière de parcourir la collection
             btn.removeAttribute('checked');
         }
     }
@@ -57,7 +70,6 @@ window.addEventListener('DOMContentLoaded', function () {
                     default: changeColorSection('#373737'); btn.setAttribute('checked', '');
                 }
             })
-            //btn.removeAttribute('checked');
         }
     }
     changeColorTheme();
