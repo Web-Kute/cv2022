@@ -28,9 +28,18 @@ window.addEventListener('DOMContentLoaded', function () {
     console.log(typeof cssVar);
 
     // Set Property of var CSS to change color of theme
-    let sectionTheme = document.querySelector('section:nth-of-type(2n)');
+    let sectionTheme = document.querySelectorAll('section:nth-of-type(2n)');
     let btnRadio = document.querySelectorAll('input[name="theme"]');
     //let propsColor = sectionTheme.style.setProperty('--bg-section-color', 'red');
+
+    // for (const section of sectionTheme) { 
+    //     style.setProperty('--bg-section-color', '#6a89cc'); 
+    // }
+
+
+    // let section = sectionTheme.forEach((sec) => {
+
+    // })
 
     // Themes Color
     function changeColorTheme() {
@@ -39,11 +48,11 @@ window.addEventListener('DOMContentLoaded', function () {
                 let isChecked = btn.checked;
                 if (isChecked === true) {
                     switch (btn.value) {
-                        case 'light': sectionTheme.style.setProperty('--bg-section-color', '#6a89cc');
+                        case 'light': for (const section of sectionTheme) { section.style.setProperty('--bg-section-color', '#6a89cc'); }
                             break;
-                        case 'dark': sectionTheme.style.setProperty('--bg-section-color', '#373737');
+                        case 'dark': for (const section of sectionTheme) { section.style.setProperty('--bg-section-color', '#373737'); }
                             break;
-                        case 'gold': sectionTheme.style.setProperty('--bg-section-color', 'goldenrod');
+                        case 'gold': for (const section of sectionTheme) { section.style.setProperty('--bg-section-color', '#daa520'); }
                             break;
                         default:
                     }
