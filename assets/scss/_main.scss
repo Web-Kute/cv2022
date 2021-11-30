@@ -119,6 +119,14 @@ h2 {
     color: $secondary_color;
 }
 
+//Title Header
+#title-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
 /** Section A propos **/
 .about__container {
     display: flex;
@@ -256,7 +264,8 @@ h2 {
 }
 
 section:nth-of-type(even) {
-    background-color: rgba($color: $secondary_color, $alpha: 1.0);
+    //background-color: rgba($color: $theme_color, $alpha: 1.0);
+    background-color: $theme_color;
     color: $white;
     padding: 1em;
 

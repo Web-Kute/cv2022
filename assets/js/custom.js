@@ -18,3 +18,41 @@ function nomChat(nom) {
 
 // Pendant la phase de création la fonction et la variable sont mises en mémoire
 // Mais pas la valeur de la variable
+
+window.addEventListener('DOMContentLoaded', function () {
+    // window.getComputedStyle
+    const avatar = document.querySelector('.apropos__foto figure img');
+    let cssVar = window.getComputedStyle(avatar).getPropertyValue("height");
+    console.log(cssVar);
+    console.log(getComputedStyle(avatar).getPropertyValue("border-bottom-style"));
+    console.log(typeof cssVar);
+
+    // Set Property of var CSS to change color of theme
+    let sectionTheme = document.querySelector('section:nth-of-type(2n)');
+    let btnRadio = document.querySelectorAll('input[name="theme"]');
+    //let propsColor = sectionTheme.style.setProperty('--bg-section-color', 'red');
+
+    // Themes Color
+    function changeColorTheme() {
+        for (const btn of btnRadio) {
+            btn.addEventListener('change', () => {
+                let isChecked = btn.checked;
+                if (isChecked === true) {
+                    switch (btn.value) {
+                        case 'light': sectionTheme.style.setProperty('--bg-section-color', '#6a89cc');
+                            break;
+                        case 'dark': sectionTheme.style.setProperty('--bg-section-color', '#373737');
+                            break;
+                        case 'gold': sectionTheme.style.setProperty('--bg-section-color', 'goldenrod');
+                            break;
+                        default:
+                    }
+
+                }
+            })
+        }
+    }
+    changeColorTheme();
+
+    console.log(window.innerHeight);
+})

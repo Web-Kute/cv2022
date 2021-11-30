@@ -1,5 +1,16 @@
+//Declare GLOBAL variables with root
+:root {
+    --bg-section-color: #373737;
+    // --gradDark: hsl(144, 100%, 89%);
+    // --gradLight: hsl(42, 94%, 76%);
+}
+
+// $viewport: calc(var(--vh, 1vh) * 100);
+// $sizeRoundLogo: calc(var(--heightRoundLogo) + 10px);
+$heightSlider: calc(var(--heightSlider) / 3);
 $primary_color: #daa520;
 $secondary_color:#373737;
 $white:white;
 $whitepale:#f0f8ff;
 $duration: 500ms;
+$theme_color: var(--bg-section-color);

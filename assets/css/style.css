@@ -1,4 +1,8 @@
 @charset "UTF-8";
+:root {
+  --bg-section-color: #373737;
+}
+
 @font-face {
   font-family: 'Roboto';
   src: url("../fonts/roboto/Roboto-Regular-webfont.woff") format("woff");
@@ -153,6 +157,17 @@ h2 {
   color: #373737;
 }
 
+#title-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 /** Section A propos **/
 .about__container {
   display: -webkit-box;
@@ -272,7 +287,7 @@ h2 {
 }
 
 section:nth-of-type(even) {
-  background-color: #373737;
+  background-color: var(--bg-section-color);
   color: white;
   padding: 1em;
 }
