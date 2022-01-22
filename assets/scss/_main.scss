@@ -231,9 +231,17 @@ h2 {
 
         &:nth-child(1) {
             label {
+                &:hover {
+                    &::after {
+                        opacity: 0.5;
+                    }
+                }
+
                 &::after {
                     background-position: 2px center;
+
                 }
+
             }
         }
 
