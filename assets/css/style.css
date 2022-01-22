@@ -270,6 +270,10 @@ h2 {
   background-size: cover;
 }
 
+.skills-data tr:nth-child(1) label:hover::after {
+  opacity: 0.5;
+}
+
 .skills-data tr:nth-child(1) label::after {
   background-position: 2px center;
 }
