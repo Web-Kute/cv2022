@@ -22,6 +22,7 @@
     font-display: swap;
 }
 
+<<<<<<< HEAD
 // main changes
 @font-face {
     font-family: 'Playfair Bold';
@@ -30,6 +31,16 @@
 }
 
 // Second main changes
+=======
+//Orange is new black
+>>>>>>> 29253cc (initial commit)
+@font-face {
+    font-family: 'Playfair Bold';
+    src: url("../fonts/playfair/PlayfairDisplay-Bold.ttf") format("ttf");
+    font-display: swap;
+}
+
+//Blue is new white
 @font-face {
     font-family: 'Playfair Bold';
     src: url("../fonts/playfair/PlayfairDisplay-Bold.ttf") format("ttf");
